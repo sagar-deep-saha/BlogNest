@@ -223,6 +223,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

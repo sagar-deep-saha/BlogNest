@@ -18,14 +18,12 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     }
 
 
-    $id = $_POST['id'];
-    $bid = (int)$id;
+    $ide = $_POST['ide'];
+    $bide = (int)$ide;
     $writer = $_POST['writer'];
     $bwriter = (int)$writer;
-    $type = $_POST['title'];
-    $blog = $_POST['blog'];
 
-    $sql_query = " UPDATE `blog` SET  `type` = '$type' , `blog` = '$blog' WHERE `id` = $bid AND `writer`= $bwriter " ;
+    $sql_query = " DELETE FROM blog WHERE `id` = $bide AND `writer`= $bwriter " ;
     $last_query= mysqli_query($connection, $sql_query);
 
     // $connection->close();

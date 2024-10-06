@@ -7,8 +7,6 @@ if ($_SESSION["new_session"] == false) {
 }
 
 $df = $_SESSION['emailadd'];
-// $sq = $_SESSION['search_query'];
-
 
 $search_name = $_POST['search'];
 
@@ -22,10 +20,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
     $last_query = mysqli_query($connection, $sql_query);
     $last_query_x = mysqli_query($connection, $sql_query_x);
-
-
-    // $last_query_search = mysqli_query($connection, "SELECT * FROM `glitch`.`blog` WHERE `type` LIKE '$search_name%';");
-    // $last_query_search = ($connection, $sql_query_search);
 
 
     $connection->close();

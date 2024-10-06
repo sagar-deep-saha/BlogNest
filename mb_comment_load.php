@@ -10,11 +10,6 @@ $df = $_SESSION['emailadd'];
 
 if (isset($_SERVER['REQUEST_METHOD'])) {
 
-    // $server = "localhost";
-    // $user = "root";
-    // $port = "3306";
-    // $password = "";
-    // $database = "glitch";
     require_once("connector.php");
 
     $connection = mysqli_connect($server,$user,$password,$database,$port);
@@ -22,7 +17,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         die(mysqli_connect_error());
     }
 
-    // require "connector.php";
 
     $blogid = $_POST['blogid'];
     $writer = $_POST['writer'];

@@ -34,12 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <style>
     body {
-        background: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
+        /* background: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
             linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
-        background-size: 14px 24px;
+        background-size: 14px 24px; */
+        background-image: url('fold/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         text-align: center;
+        align-items: center;
     }
-    /* From Uiverse.io by VitorBaraoDias */ 
 .form-control {
     text-align: left;
   margin: 20px;
@@ -52,6 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   gap: 10px;
   padding: 25px;
   border-radius: 8px;
+  margin-left: 34%;
+  margin-top: -190px;
+
 }
 .title {
   font-size: 28px;
@@ -115,6 +121,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 #logo{
     height: 200px;
+    position: relative;
+    z-index: 3;
+    margin-top: -3.5%;
+    margin-bottom: 3.5%;
 }
 
 </style>
@@ -124,7 +134,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div>
         <img src="fold/logo.png" alt="" id="logo">
         <div>
-            <!-- /* From Uiverse.io by VitorBaraoDias */  -->
             <form class="form-control" action="" method="post">
                 <p class="title">Login</p>
                 <div class="input-field">

@@ -24,10 +24,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     $last_query_x = mysqli_query($connection, $sql_query_x);
 
 
-    // $sql_query_search = "SELECT * FROM `blog` WHERE `type` LIKE '%$search_name%' OR `blog` LIKE '%$search_name%';";
-    // $last_query_search = mysqli_query($connection, $sql_query_search);
-
-
     $connection->close();
 }
 
@@ -660,9 +656,17 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
                         <span class="title">Blog No. <?php echo $loop["id"]; ?></span>
                         <div class="comments">
-                            <div class="comment-react">
+                            <div class="comment-react" onclick="kace();" style="cursor: pointer;background-color:#ff3333;">
                                 <hr>
-                                <span><?php echo $loop["id"]; ?> </span>
+                                <span>
+                                    <img src="fold/trash3.svg" alt="" style="height: 12px;">
+                                    <form action="del.php" method="post" style="display: none;">
+                                        <input type="text" name="ide" id="" value="<?php echo $loop["id"]; ?>" style="display: none;">
+                                        <input type="text" name="writer" id="" required="required" class="mrx" value="<?php echo $loop["userid"]; ?> "><br><br>
+
+                                        <button type="submit" style="display: none;" id="last_click">Z</button>
+                                    </form>
+                                </span>
                             </div>
                             <div class="comment-container">
                                 <div class="user">
@@ -727,14 +731,109 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                                 <input style="display: none;" type="text" name="writer" placeholder="ID" required="required" value="<?php echo $loop["writer"]; ?>" class="v18">
                                 <label for="title" class="v19">New Title</label>
                                 <br>
-                                <input type="text" name="title" placeholder="Input New Title" id="xc1" required="required" value="<?php echo $loop["type"]; ?>">
+                                <div class="group">
+                                    <input type="text" class="input" name="title" placeholder="Input New Title" id="xc1" required="required" value="<?php echo $loop["type"]; ?>">
+                                </div>
                                 <br>
                                 <br>
                                 <label for="blog" class="v19">Changing Blog</label>
                                 <br>
-                                <textarea type="text" name="blog" placeholder="Input New Blog" id="xc2" required="required"><?php echo $loop["blog"]; ?></textarea>
+                                <div class="group">
+                                    <textarea type="text" name="blog" class="input" placeholder="Input New Blog" id="xc2" required="required"><?php echo $loop["blog"]; ?></textarea>
+                                </div>
+                                <br>
                                 <span>&nbsp;&nbsp;</span>
-                                <button type="submit" id="color_grain">UPDATE</button>
+                                <button class="button" type="submit">
+                                    <span class="button-content">Update</span>
+                                </button>
+                                <style>
+                                    .group {
+                                        display: flex;
+                                        line-height: 28px;
+                                        align-items: center;
+                                        position: relative;
+                                        max-width: 190px;
+                                    }
+
+                                    .input {
+                                        width: 100%;
+                                        height: 40px;
+                                        line-height: 28px;
+                                        padding: 0 1rem;
+                                        padding-left: 2.5rem;
+                                        border: 2px solid transparent;
+                                        border-radius: 8px;
+                                        outline: none;
+                                        background-color: #f3f3f4;
+                                        color: #0d0c22;
+                                        transition: .3s ease;
+                                    }
+
+                                    .input::placeholder {
+                                        color: #9e9ea7;
+                                    }
+
+                                    .input:focus,
+                                    input:hover {
+                                        outline: none;
+                                        border-color: rgba(148, 148, 158, 0.4);
+                                        background-color: #fff;
+                                        box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+                                    }
+
+                                    .icon {
+                                        position: absolute;
+                                        left: 1rem;
+                                        fill: #9e9ea7;
+                                        width: 1rem;
+                                        height: 1rem;
+                                    }
+
+
+
+
+
+
+                                    .button {
+                                        position: relative;
+                                        overflow: hidden;
+                                        height: 30px;
+                                        padding: 0 2%;
+                                        border-radius: 7px;
+                                        background: #3d3a4e;
+                                        background-size: 400%;
+                                        color: #fff;
+                                        border: none;
+                                        cursor: pointer;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    .button:hover::before {
+                                        transform: scaleX(1);
+                                    }
+
+                                    .button-content {
+                                        position: relative;
+                                        z-index: 1;
+                                    }
+
+                                    .button::before {
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        transform: scaleX(0);
+                                        transform-origin: 0 50%;
+                                        width: 100%;
+                                        height: inherit;
+                                        border-radius: inherit;
+                                        background: linear-gradient(82.3deg,
+                                                rgb(92, 133, 214) 10.8%,
+                                                rgb(10, 20, 41) 94.3%);
+                                        transition: all 0.475s;
+                                    }
+                                </style>
+
                                 <br>
                             </form>
                             <br>

@@ -18,6 +18,13 @@ function brown() {
 
 }
 
+function kace() {
+    document.getElementById('last_click').click();
+    // document.getElementById('blog_blog').value = '';
+    // document.getElementsByClassName("mrx").innerHTML = "";
+
+}
+
 
 
 
