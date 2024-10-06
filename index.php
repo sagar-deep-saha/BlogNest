@@ -22,115 +22,168 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iitial Home Page</title>
-    <link rel="shortcut icon" href="fold/logo.png" type="image/x-icon">
+    <title>Document</title>
     <style>
+        .container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+
         body {
-            background-color: aliceblue;
-        }
-
-        #box_a {
-            border: green 1px solid;
-            margin: 2% 2% 0% 2%;
-            border-radius: 8px;
-        }
-
-        #ind_head {
-            font-family: 'Courier New', Courier, monospace;
-            margin: 10% 0% -10% 0%;
-            color: navy;
             text-align: center;
         }
 
-        /* #scroll_up{
-    display: flexbox;
-}
-#scroll_down{
-    display: flexbox;
-} */
-        #box_b {
-            border: 1px solid navy;
-            margin: 12% 2% 2% 2%;
-            /* padding: 0% 8%; */
+        .card {
+            width: 70%;
+            background: #454f4f;
+            clip-path: polygon(30px 0%,
+                    100% 0,
+                    100% calc(100% - 30px),
+                    calc(100% - 30px) 100%,
+                    0 100%,
+                    0% 30px);
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
             display: flex;
-            border-radius: 6px;
-            height: 400px;
+            flex-direction: column;
+            margin-top: 3%;
+            margin-bottom: -30%;
+            padding-top: 6%;
+            padding-bottom: 6%;
+            margin-left: 15%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            opacity: 0.7;
+            position: fixed;
         }
 
-        #ind_tail {
-            font-family: 'Courier New', Courier, monospace;
-            /* margin: 10% 0% -10% 0%; */
-            cursor: pointer;
-            color: navy;
+        .card span {
+            font-weight: bold;
+            color: white;
             text-align: center;
+            display: block;
+            font-size: 1em;
         }
+
+        .card .info {
+            font-weight: 400;
+            color: white;
+            display: block;
+            text-align: center;
+            font-size: 0.72em;
+            margin: 1em;
+        }
+
+        .card .img {
+            width: 4.8em;
+            height: 4.8em;
+            background: white;
+            border-radius: 15px;
+            margin: auto;
+        }
+
+        .card .share {
+            margin-top: 1em;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        .card a {
+            color: white;
+            transition: 0.4s ease-in-out;
+        }
+
+        .card a:hover {
+            color: red;
+        }
+
+        .card button {
+            padding: 0.8em 1.7em;
+            display: block;
+            margin: auto;
+            border-radius: 25px;
+            border: none;
+            font-weight: bold;
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+            transition: 0.4s ease-in-out;
+        }
+
+        .card button:hover {
+            background: red;
+            color: white;
+            cursor: pointer;
+        }
+
+        #doss {
+            padding: 0.8em 1.7em;
+            display: block;
+            margin: auto;
+            border-radius: 25px;
+            border: none;
+            font-weight: bold;
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+            transition: 0.4s ease-in-out;
+        }
+
+        #doss:hover {
+            background: blue;
+            color: white;
+            cursor: pointer;
+        }
+
 
         table {
-            border: green 1px solid;
-            margin: 2%;
+            border: black 0.5px solid;
+            margin: auto 12%;
             border-radius: 10px;
-            width: 1000px;
+            color: whitesmoke;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
         th {
-            border: navy 1px solid;
-            /* background-color: green; */
+            border: black 0.5px solid;
             border-radius: 8px;
-            padding: 1%;
-            font-size: 22px;
+            padding: 2%;
+            font-size: 18px;
+            width: 30%;
         }
 
         td {
-            border: blue 1px solid;
-            /* background-color: green; */
+            border: black 0.5px solid;
             border-radius: 8px;
-            padding: 1%;
-            width: 380px;
-            font-size: 22px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        #ind_blog {
-            background-color: brown;
-            padding: 0.5%;
-            border: 0.5px solid navy;
-            border-top-right-radius: 6px;
-            border-bottom-right-radius: 6px;
-            height: 15px;
-            color: whitesmoke;
-            font-family: 'Courier New', Courier, monospace;
-            width: 150px;
-            margin: 3% 0% -3% 0%;
-            /* margin-top: 20px; */
+            padding: 2%;
+            width: 30%;
+            font-size: 18px;
         }
     </style>
 </head>
 
-<body>
-    <div id="box_a">
-        <a href="blog.php">
-            <h4 id="ind_blog">Return To Blogs</h4>
-        </a>
-        <h2 id="ind_head">Welcome <?php echo $_SESSION["emailadd"] ?></h2>
-        <div id="box_b">
-            <marquee behavior="scroll" direction="up" id="scroll_up">
-                <img src="fold/up.png" alt="" id="img_up">
-                <img src="fold/down.png" alt="" id="img_down">
-            </marquee>
+<body class="gradient-overlay">
+    <div>
+        <div class="card">
+            <br>
+            <span style="margin-top:-40px;">About Me</span>
+            <p class="info">
             <table>
                 <?php
                 if (mysqli_num_rows($last_query) == 1) {
                     while ($loop = mysqli_fetch_array($last_query)) {
                 ?>
-                        <!-- <tr>
-                            <th>Roll:</th>
-                            <td>?php echo $loop["roll"]; ?></td>
-                        </tr> -->
                         <tr>
                             <th>Name:</th>
                             <td><?php echo $loop["name"]; ?></td>
@@ -154,10 +207,21 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                 }
                 ?>
             </table>
+            </p>
+            <a href="blog.php">
+                <button id="doss">Home Page
+                </button>
+            </a>
+            <br>
+            <a href="out.php">
+
+                <button style="margin-bottom: -40px;">Log Out
+                    &nbsp;
+                    <img src="fold/box-arrow-right.svg" alt="" height="16px" style="font-weight: bold;margin-bottom:-3px;">
+                </button>
+            </a>
         </div>
-        <a href="out.php">
-            <h4 id="ind_tail">Let's Log Out</h4>
-        </a>
+
     </div>
 </body>
 
