@@ -48,16 +48,12 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         text-align: center;
     }
 
-
-
-    /* From Uiverse.io by zanina-yassine */
     .card {
         width: 99%;
         height: fit-content;
         background-color: white;
         box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
         border-radius: 17px 17px 27px 27px;
-        /* margin-top: 60px; */
     }
 
     .title {
@@ -68,16 +64,12 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         align-items: center;
         padding-left: 20px;
         border-bottom: 1px solid #d9d9d9;
-        /* border-bottom: 1px solid #f1f1f1; */
         border-top: 1px solid #d9d9d9;
-        /* border-top: 1px solid #f1f1f1; */
         font-weight: 700;
         font-size: 13px;
         color: #47484b;
         border-top-right-radius: 40px;
         border-top-left-radius: 40px;
-        /* margin-top: 60px; */
-        /* box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1); */
         box-shadow: 0px -187px 75px rgba(0, 0, 0, 0.01), 0px -105px 63px rgba(0, 0, 0, 0.05), 0px -47px 47px rgba(0, 0, 0, 0.09), 0px -12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 
 
@@ -97,7 +89,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         grid-template-columns: 35px 1fr;
         gap: 20px;
         padding: 20px;
-        /* border-top: 1px solid; */
     }
 
     .comment-react {
@@ -241,8 +232,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     .text-box {
         width: 98%;
         height: fit-content;
-        /* background-color: #f1f1f1; */
-        padding: 8px;
         border-top: 1px solid #d9d9d9;
         ;
         margin-bottom: 60px;
@@ -253,7 +242,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         border-radius: 8px 8px 21px 21px;
         padding: 8px;
         border-bottom: 1px solid;
-        /* border-top: 1px solid; */
     }
 
     .text-box textarea {
@@ -837,8 +825,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
 
                         </div>
-
-
 
                 <?php
                         $s++;

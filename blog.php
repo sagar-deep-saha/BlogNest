@@ -48,16 +48,12 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         text-align: center;
     }
 
-
-
-    /* From Uiverse.io by zanina-yassine */
     .card {
         width: 99%;
         height: fit-content;
         background-color: white;
         box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
         border-radius: 17px 17px 27px 27px;
-        /* margin-top: 60px; */
     }
 
     .title {
@@ -68,17 +64,13 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         align-items: center;
         padding-left: 20px;
         border-bottom: 1px solid #d9d9d9;
-        /* border-bottom: 1px solid #f1f1f1; */
         border-top: 1px solid #d9d9d9;
-        /* border-top: 1px solid #f1f1f1; */
         font-weight: 700;
         font-size: 13px;
         color: #47484b;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        /* margin-top: 60px; */
         box-shadow: 0px -187px 75px rgba(0, 0, 0, 0.01), 0px -105px 63px rgba(0, 0, 0, 0.05), 0px -47px 47px rgba(0, 0, 0, 0.09), 0px -12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-
 
     }
 
@@ -96,7 +88,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         grid-template-columns: 35px 1fr;
         gap: 20px;
         padding: 20px;
-        /* border-top: 1px solid; */
     }
 
     .comment-react {
@@ -240,7 +231,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     .text-box {
         width: 98%;
         height: fit-content;
-        /* background-color: #f1f1f1; */
         padding: 8px;
         border-top: 1px solid #d9d9d9;
         ;
@@ -252,7 +242,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         border-radius: 8px 8px 21px 21px;
         padding: 8px;
         border-bottom: 1px solid;
-        /* border-top: 1px solid; */
     }
 
     .text-box textarea {
@@ -312,11 +301,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         }
     }
 
-
-
-
-
-
     #blog_logo {
         height: 200px;
         margin-top: -80px;
@@ -324,21 +308,17 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     }
 
     #search_bar {
-        /* display: flexbox; */
-        /* margin-top: 10px; */
         border-radius: 17px;
         height: 18px;
         border: 0.25px solid;
     }
 
     #head_box {
-        /* border: navy 1px solid; */
         border-radius: 12px;
         padding: 2%;
         font-family: 'Courier New', Courier, monospace;
         color: navy;
         width: 95%;
-        /* display: flexbox; */
         background: -webkit-linear-gradient(top, rgb(255, 252, 252) 20%, rgb(227, 227, 227) 70%);
         position: fixed !important;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
@@ -346,8 +326,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         align-items: center;
         z-index: 3;
         display: flex;
-        /* margin-top: 0px; */
-        /* margin-top: -11%; */
     }
 
     #head_box h2 {
@@ -360,27 +338,11 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         color: Navy;
         margin-left: 30%;
         color: red !important;
-        /* margin: 80%,80%,80%,80%; */
-        /* margin-right: -20%; */
-        /* align-items: right; */
-        /* margin-top: -20px; */
-        /* float: right; */
         font-weight: 600;
-        /* position: relative; */
     }
 
-
-
-
-
-
-
-
-    /* From Uiverse.io by alexruix */
     .form-box {
-        /* max-width: 300px; */
         width: 30%;
-        /* background: red; */
         background: #f1f7fe;
         overflow: hidden;
         border-radius: 16px;
@@ -399,10 +361,8 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         gap: 16px;
         text-align: center;
 
-        /* z-index: 4; */
     }
 
-    /*Form text*/
     .title2 {
         font-weight: bold;
         font-size: 1.6rem;
@@ -413,7 +373,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         color: #666;
     }
 
-    /*Inputs box*/
     .form-container {
         overflow: hidden;
         border-radius: 8px;
@@ -451,7 +410,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         text-decoration: underline;
     }
 
-    /*Button*/
     .form button {
         background-color: #0066ff;
         color: #fff;
@@ -468,14 +426,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         background-color: #005ce6;
     }
 
-
-
-
-
-
-    /* From Uiverse.io by Yaya12085 */
     .card1 {
-        /* overflow: hidden; */
         position: fixed;
         background-color: #ffffff;
         text-align: left;
@@ -483,7 +434,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         max-width: 290px;
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         z-index: 9;
-        /* margin: 10%.10%, 10%, 0%; */
         margin-left: 38%;
         margin-top: 12%;
         display: none;
@@ -571,9 +521,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     }
 
-
-
-
     .dismiss {
         position: absolute;
         right: 10px;
@@ -595,7 +542,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
     .dismiss:hover {
         background-color: #ee0d0d;
-        /* border: 2px solid #ee0d0d; */
         color: #fff;
     }
 
@@ -608,29 +554,11 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     }
 
 
-
-    /* #musk {
-            color: black;
-            font-weight: 900;
-            background-color: rgb(26, 255, 198);
-            border: none;
-            margin-top: 8px;
-            cursor: pointer;
-        } */
 </style>
 
 <body>
     <div>
         <div>
-
-
-
-
-
-
-
-
-
 
             <div id="head_box">
 
@@ -647,22 +575,14 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                     </p>
                 </a>
 
-
-
-
-
-
                 <div style="display: flex;">
                     <span onclick="blog_form_show();" style="display: flexbox;width:131px;margin-right:6px;margin-left:10%;cursor:pointer;" class="nandan">Create Blog</span>
                     |
                     <a href="my_blog.php" class="mfg" style="color: black;margin-right:-16px; margin-left:6px;display: flexbox; width:131px;justify-content:baseline;" class="nandan">My Blogs</a>
-                    <!-- <br> -->
                     |
                     <form action="blog_search.php" style="display: flex" method="post">
                         <input type="text" name="search" id="search_bar" style="padding-left:4px;display:flexbox;margin-left:6px;" class="nandan">
-                        <!-- <brown > -->
                         <img src="fold/search.svg" alt="" id="musk" onclick="brown();" style="margin-left:6px;cursor:pointer;">
-                        <!-- </brown> -->
                         <button type="submit" style="display: none;margin-left:-18px;z-index:-1;" id="false_fish">
                         </button>
                     </form>
@@ -670,11 +590,8 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                 </div>
 
 
-
-
                 <h4 id="blog_tail">
                     <a href="out.php">
-                        <!-- &nbsp;Do Log Out -->
                         <img src="fold/box-arrow-right.svg" alt="">
                     </a>
                 </h4>
@@ -682,10 +599,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
             </div>
 
 
-
-
-
-            <!-- /* From Uiverse.io by Yaya12085 */  -->
             <div class="card1">
                 <div class="header1">
                     <div class="image1"><svg aria-hidden="true" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
@@ -708,15 +621,12 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
             <div class="form-box" id="blog_form" style="display: none;">
                 <form class="form" action="blog_load.php" method="POST">
-                    <!-- <div class="image"> -->
                     <buttom class="dismiss" onclick="blog_form_hide();">×</buttom>
                     <span class="title2">Write a Blog</span>
                     <br>
                     <span class="subtitle">Free to express your words</span>
                     <div class="form-container">
                         <input type="text" class="input" name="title" placeholder="Title of the blog">
-                        <!-- <input type="text" class="input" name="writer" style="display: none;"  placeholder="Email"> -->
-                        <!-- <input type="password" class="input" placeholder="Password"> -->
                         <textarea name="blog" id="" class="input" style="height: 150px;" rows="8" placeholder="Write your blog here ..."></textarea>
                         <div style="display: none;">
 
@@ -739,7 +649,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                     </div>
                     <button type="submit" id="blog_form_button">Create</button>
                 </form>
-    
+
                 <?php
                 if (mysqli_num_rows($last_query_search) > 0) {
                     $ss = 0;
@@ -806,8 +716,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                     echo "No Blogs found";
                 }
                 ?>
-                <!-- </div> -->
-
 
             </div>
 
