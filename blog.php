@@ -32,7 +32,9 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BlogNest</title>
+    <link rel="shortcut icon" href="fold/logo.png" type="image/x-icon">
+
 </head>
 <style>
     body {
@@ -646,27 +648,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                 </form>
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             <div style="height: 160px;"> </div>
