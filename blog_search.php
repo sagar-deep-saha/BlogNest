@@ -8,7 +8,7 @@ if ($_SESSION["new_session"] == false) {
 
 $df = $_SESSION['emailadd'];
 
-// $search_name = $_POST['search'];
+$search_name = $_POST['search'];
 
 if (isset($_SERVER['REQUEST_METHOD'])) {
 
@@ -83,7 +83,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         grid-template-columns: 35px 1fr;
         gap: 20px;
         padding: 20px;
-        /* border-top: 1px solid; */
     }
 
     .comment-react {
@@ -540,6 +539,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         height: 30px;
         border-radius: 7px;
         transition: .3s ease;
+        cursor: pointer;
     }
 
     .dismiss:hover {
@@ -563,8 +563,9 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
             <div id="head_box">
 
-                <img src="fold/logo.png" alt="" height="40px" id="blog_logo" style="display: block;">
-
+                <a href="blog.php">
+                    <img src="fold/logo.png" alt="" height="40px" id="blog_logo" style="display: block;">
+                </a>
                 <br>
 
                 <a href="index.php" style="margin-left: 5%;margin-right: 5%;">
@@ -578,11 +579,13 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
 
                 <div style="display: flex;">
-                    <span onclick="blog_form_show();" style="display: flexbox;width:131px;margin-right:6px;margin-left:10%;cursor:pointer;" class="nandan">Create Blog</span>
+                    <span onclick="blog_form_show();" style=" color:black;display: flexbox;width:131px;margin-right:6px;margin-left:10%;cursor:pointer;" class="nandan">Create Blog</span>
+                    |
+                    <a href="blog.php" class="mfg" style="color: black;margin-right:-16px; margin-left:6px;display: flexbox; width:75px;justify-content:baseline;" class="nandan">Home</a>
                     |
                     <a href="my_blog.php" class="mfg" style="color: black;margin-right:-16px; margin-left:6px;display: flexbox; width:131px;justify-content:baseline;" class="nandan">My Blogs</a>
                     |
-                    <form action="blog_search.php" style="display: flex">
+                    <form action="blog_search.php" style="display: flex" method="post">
                         <input type="text" name="search" id="search_bar" style="padding-left:4px;display:flexbox;margin-left:6px;" class="nandan">
                         <img src="fold/search.svg" alt="" id="musk" onclick="brown();" style="margin-left:6px;cursor:pointer;">
                         <button type="submit" style="display: none;margin-left:-18px;z-index:-1;" id="false_fish">

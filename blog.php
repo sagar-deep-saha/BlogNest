@@ -24,7 +24,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     $last_query_x = mysqli_query($connection, $sql_query_x);
 
 
-    $last_query_search = mysqli_query($connection, "SELECT * FROM `glitch`.`blog` WHERE `type` LIKE '$search_name%';");
+    // $last_query_search = mysqli_query($connection, "SELECT * FROM `glitch`.`blog` WHERE `type` LIKE '$search_name%';");
     // $last_query_search = ($connection, $sql_query_search);
 
 
@@ -538,6 +538,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         height: 30px;
         border-radius: 7px;
         transition: .3s ease;
+        cursor: pointer;
     }
 
     .dismiss:hover {
@@ -552,8 +553,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     .nandan {
         margin: 0%, 0%, 0%, 0%;
     }
-
-
 </style>
 
 <body>
@@ -561,9 +560,9 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         <div>
 
             <div id="head_box">
-
-                <img src="fold/logo.png" alt="" height="40px" id="blog_logo" style="display: block;">
-
+                <a href="blog.php">
+                    <img src="fold/logo.png" alt="" height="40px" id="blog_logo" style="display: block;">
+                </a>
                 <br>
 
                 <a href="index.php" style="margin-left: 5%;margin-right: 5%;">
@@ -576,7 +575,9 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                 </a>
 
                 <div style="display: flex;">
-                    <span onclick="blog_form_show();" style="display: flexbox;width:131px;margin-right:6px;margin-left:10%;cursor:pointer;" class="nandan">Create Blog</span>
+                    <span onclick="blog_form_show();" style="color:black;display:flexbox;width:131px;margin-right:6px;margin-left:10%;cursor:pointer;" class="nandan">Create Blog</span>
+                    |
+                    <a href="blog.php" class="mfg" style="font-weight:900; color: black;margin-right:-16px; margin-left:6px;display: flexbox; width:75px;justify-content:baseline;" class="nandan">Home</a>
                     |
                     <a href="my_blog.php" class="mfg" style="color: black;margin-right:-16px; margin-left:6px;display: flexbox; width:131px;justify-content:baseline;" class="nandan">My Blogs</a>
                     |
@@ -650,73 +651,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                     <button type="submit" id="blog_form_button">Create</button>
                 </form>
 
-                <?php
-                if (mysqli_num_rows($last_query_search) > 0) {
-                    $ss = 0;
-                    while ($loop_search = mysqli_fetch_array($last_query_search)) {
-
-                ?>
-
-
-                        <div id="blog_box_2x">
-                            <p class="dom_z">
-                                Blog No.
-                                <?php echo $loop_search["id"]; ?>
-                            </p>
-                            <h3>
-                                <?php echo $loop_search["type"]; ?>
-                            </h3>
-                            <p>
-                                <?php echo $loop_search["blog"]; ?>
-                            </p>
-                            <h5>Written By : <?php echo $loop_search3["name"]; ?></h5>
-                            <details>
-                                <summary>Comments :</summary>
-                                <?php
-                                if (isset($_SERVER['REQUEST_METHOD'])) {
-                                    require "connector.php";
-
-                                    $cfs = $loop_search['id'];
-
-                                    $sql_query_2_search = "SELECT * FROM comment  LEFT JOIN users ON comment.writer=users.email WHERE blogid='$cfs' ORDER BY id DESC LIMIT 10";
-
-                                    $last_query_2_search = mysqli_query($connection, $sql_query_2_search);
-
-                                    $connection->close();
-                                }
-                                if (mysqli_num_rows($last_query_2_search) > 0) {
-                                    $ts = 0;
-                                    while ($pool_search = mysqli_fetch_array($last_query_2_search)) {
-                                ?>
-                                        <p class="dom_x"><?php echo $pool_search["comment"]; ?></p>
-                                        <p class="dom_x" id="s_bold">Comment By <?php echo $pool_search["name"]; ?></p>
-                                        <hr>
-                                <?php
-                                        $ts++;
-                                    }
-                                } else {
-                                    echo "No result found";
-                                }
-                                ?>
-                            </details>
-                            <br>
-                            <form action="comment_load.php" method="POST">
-                                <div style="display: none;">
-                                    <input type="text" name="blogid" id="" value="<?php echo $loop_search["id"]; ?>">
-                                    <input type="text" name="writer" id="" value="<?php echo $_SESSION['emailadd']; ?>">
-                                </div>
-                                <input type="text" name="comment" placeholder="Enter Your Comment" required="required">
-                                <button type="submit" onclick="blog_form_hide();">Comment</button>
-                            </form>
-                        </div>
-                <?php
-                        $ss++;
-                    }
-                } else {
-                    echo "No Blogs found";
-                }
-                ?>
-
             </div>
 
 
@@ -754,11 +688,6 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                         <span class="title">Blog No. <?php echo $loop["id"]; ?></span>
                         <div class="comments">
                             <div class="comment-react">
-                                <!-- <button>
-                                    <svg fill="none" viewBox="0 0 24 24" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill="#707277" stroke-linecap="round" stroke-width="2" stroke="#707277" d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"></path>
-                                    </svg>
-                                </button> -->
                                 <hr>
                                 <span><?php echo $loop["id"]; ?> </span>
                             </div>
@@ -832,14 +761,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                             ?>
                         </details>
                         <br>
-                        <!-- <form action="comment_load.php" method="POST">
-                                        <div style="display: none;">
-                                            <input type="text" name="blogid" id="" value="<?php echo $loop_search["id"]; ?>">
-                                            <input type="text" name="writer" id="" value="<?php echo $_SESSION['emailadd']; ?>">
-                                        </div>
-                                        <input type="text" name="comment" placeholder="Enter Your Comment" required="required">
-                                        <button type="submit" onclick="blog_form_hide();">Comment</button>
-                                    </form> -->
+
 
                         <div class="text-box">
                             <div class="box-container">
