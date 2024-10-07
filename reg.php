@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         outline: none;
         border-radius: 8px;
         height: 45px;
-        border: 1.5px solid #ecedec;
+        border: 1.5px solid #b3b3b3;
         background: transparent;
         padding-left: 10px;
     }
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         position: absolute;
         top: 25px;
         left: 15px;
-        color: #ccc;
+        color: #808080;
         transition: all 0.3s ease;
         pointer-events: none;
         z-index: 2;
