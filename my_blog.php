@@ -347,7 +347,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     #blog_tail {
         font-family: 'Courier New', Courier, monospace;
         color: Navy;
-        margin-left: 20%;
+        margin-left: 30%;
         color: red !important;
         font-weight: 600;
     }
