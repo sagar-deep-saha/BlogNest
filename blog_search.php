@@ -15,7 +15,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
 
     require "connector.php";
 
-    $sql_query = "SELECT * FROM blog LEFT JOIN users ON blog.writer=users.userid WHERE `type` LIKE '%$search_name%' OR `blog` LIKE '%$search_name%' ORDER BY id DESC ";
+    $sql_query = "SELECT * FROM blog LEFT JOIN users ON blog.writer=users.userid WHERE `type` LIKE '%$search_name%' OR `blog` LIKE '%$search_name%' OR `name` LIKE '%$search_name%' ORDER BY id DESC ";
     $sql_query_x = "SELECT userid,email FROM users WHERE email='$df' ";
 
     $last_query = mysqli_query($connection, $sql_query);
@@ -309,7 +309,17 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         height: 18px;
         border: 0.25px solid;
     }
+    #search_bar:hover {
+        border-color: #0a84ff;
+    }
 
+    #search_bar:focus,
+    #search_bar:hover {
+        outline: none;
+        border-color: rgba(148, 148, 158, 0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgb(102 102 153 / 10%);
+    }
     #head_box {
         border-radius: 12px;
         padding: 2%;

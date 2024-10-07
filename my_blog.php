@@ -312,6 +312,18 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         border: 0.25px solid;
     }
 
+    #search_bar:hover {
+        border-color: #0a84ff;
+    }
+
+    #search_bar:focus,
+    #search_bar:hover {
+        outline: none;
+        border-color: rgba(148, 148, 158, 0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgb(102 102 153 / 10%);
+    }
+
     #head_box {
         border-radius: 12px;
         padding: 2%;
@@ -734,14 +746,14 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                                 <label for="title" class="v19">New Title</label>
                                 <br>
                                 <div class="group">
-                                    <input type="text" class="input" name="title" placeholder="Input New Title" id="xc1" required="required" value="<?php echo $loop["type"]; ?>">
+                                    <input type="text" class="inputx" name="title" placeholder="Input New Title" id="xc1" required="required" value="<?php echo $loop["type"]; ?>">
                                 </div>
                                 <br>
                                 <br>
                                 <label for="blog" class="v19">Changing Blog</label>
                                 <br>
                                 <div class="group">
-                                    <textarea type="text" name="blog" class="input" placeholder="Input New Blog" id="xc2" required="required"><?php echo $loop["blog"]; ?></textarea>
+                                    <textarea type="text" name="blog" class="inputx" placeholder="Input New Blog" id="xc2" required="required"><?php echo $loop["blog"]; ?></textarea>
                                 </div>
                                 <br>
                                 <span>&nbsp;&nbsp;</span>
@@ -757,7 +769,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                                         max-width: 190px;
                                     }
 
-                                    .input {
+                                    .inputx {
                                         width: 100%;
                                         height: 40px;
                                         line-height: 28px;
@@ -771,16 +783,16 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                                         transition: .3s ease;
                                     }
 
-                                    .input::placeholder {
+                                    .inputx::placeholder {
                                         color: #9e9ea7;
                                     }
 
-                                    .input:focus,
-                                    input:hover {
+                                    .inputx:focus,
+                                    .inputx:hover {
                                         outline: none;
                                         border-color: rgba(148, 148, 158, 0.4);
                                         background-color: #fff;
-                                        box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+                                        box-shadow: 0 0 0 4px rgb(102 102 153 / 10%);
                                     }
 
                                     .icon {
