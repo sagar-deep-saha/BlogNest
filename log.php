@@ -39,7 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         /* background: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
             linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
         background-size: 14px 24px; */
-        background-image: url('fold/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
+        /* background-image: url('fold/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg'); */
+        background-image: url('fold/pikaso_embed.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;

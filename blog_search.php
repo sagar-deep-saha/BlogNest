@@ -634,8 +634,8 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                     <br>
                     <span class="subtitle">Free to express your words</span>
                     <div class="form-container">
-                        <input type="text" class="input" name="title" placeholder="Title of the blog">
-                        <textarea name="blog" id="" class="input" style="height: 150px;" rows="8" placeholder="Write your blog here ..."></textarea>
+                        <input type="text" class="input" name="title" placeholder="Title of the blog" required="required">
+                        <textarea name="blog" id="" class="input" style="height: 150px;" rows="8" placeholder="Write your blog here ..." required="required"></textarea>
                         <div style="display: none;">
 
                             <?php
@@ -757,7 +757,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
                                         <input type="text" name="blogid" id="" value="<?php echo $loop["id"]; ?>">
                                         <input type="text" name="writer" id="" value="<?php echo $_SESSION['emailadd']; ?>">
                                     </div>
-                                    <textarea placeholder="Reply" name="comment"></textarea>
+                                    <textarea placeholder="Reply" name="comment" required="required"></textarea>
                                     <div>
                                         <div class="formatting">
                                             <button type="button">

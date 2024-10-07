@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         /* background: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
             linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
         background-size: 14px 24px; */
-        background-image: url('fold/retrosupply-jLwVAUtLOAQ-unsplash.jpg');
+        background-image: url('fold/flowers-notebook-near-laptop.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         padding: 25px;
         border-radius: 8px;
         position: fixed;
-        z-index: -1;
+        z-index: 3;
     }
 
     .title {
@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     #logo {
         height: 200px;
         position: relative;
-        z-index: 3;
+        z-index: 4;
         margin-top: -3.5%;
         margin-bottom: 3.5%;
     }
