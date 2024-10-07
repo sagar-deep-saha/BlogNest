@@ -140,11 +140,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form class="form-control" action="" method="post">
                 <p class="title">Login</p>
                 <div class="input-field">
-                    <input required="" class="input" type="email" name="email" />
+                    <input required="" class="input" type="email" name="email" required="required"/>
                     <label class="label" for="input">Enter Email</label>
                 </div>
                 <div class="input-field">
-                    <input required="" class="input" type="password" name="pass" />
+                    <input required="" class="input" type="password" name="pass" required="required"/>
                     <label class="label" for="input">Enter Password</label>
                 </div>
                 <span>Not Yet Signed-Up, <a href="reg.php">Sign Up</a></span>

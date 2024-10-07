@@ -148,27 +148,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form class="form-control" action="" method="post">
                 <p class="title">Sign Up</p>
                 <div class="input-field">
-                    <input required="" class="input" type="text" name="name" />
+                    <input required="" class="input" type="text" name="name" required="required"/>
                     <label class="label" for="input">Enter Full Name</label>
                 </div>
                 <div class="input-field">
-                    <input required="" class="input" type="text" name="phone" />
+                    <input required="" class="input" type="text" name="phone" required="required"/>
                     <label class="label" for="input">Enter Phone No.</label>
                 </div>
                 <div class="input-field">
-                    <input required="" class="input" type="email" name="email" />
+                    <input required="" class="input" type="email" name="email" required="required"/>
                     <label class="label" for="input">Enter Email</label>
                 </div>
                 <div class="input-field">
-                    <input required="" class="input" type="text" name="address" />
+                    <input required="" class="input" type="text" name="address" required="required"/>
                     <label class="label" for="input">Enter Relevant Address</label>
                 </div>
                 <div class="input-field">
-                    <input required="" class="input" type="password" name="pass" />
+                    <input required="" class="input" type="password" name="pass" required="required"/>
                     <label class="label" for="input">Enter Password</label>
                 </div>
                 <div class="input-field">
-                    <input required="" class="input" type="password" name="cpass" />
+                    <input required="" class="input" type="password" name="cpass" required="required"/>
                     <label class="label" for="input">Re-enter Password</label>
                 </div>
                 <span>Already Signed-Up, <a href="log.php">Sign In</a></span>
