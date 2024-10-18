@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="input-field">
                     <input required="" class="input" type="email" name="email" required="required"/>
                     <label class="label" for="input">Enter Email</label>
-                </div>
+                     </div>
                 <div class="input-field">
                     <input required="" class="input" type="password" name="pass" required="required"/>
                     <label class="label" for="input">Enter Password</label>
